@@ -2,6 +2,7 @@
   "name": "jio_backend",
   "version": "1.0.0",
   "main": "api.js",
+  
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon api.js",
     "test": "NODE_ENV=test jest",
