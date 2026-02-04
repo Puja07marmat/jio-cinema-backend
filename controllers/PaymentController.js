@@ -1,5 +1,5 @@
 const Razorpay = require("razorpay");
-const UserModel = require("../model/UserModel");
+const User = require('../models/UserModel');
 
 const razorpay = new Razorpay({
     key_id: process.env.RAZORPAY_PUBLIC_KEY,

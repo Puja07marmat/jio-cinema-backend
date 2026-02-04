@@ -1,7 +1,7 @@
 // function
 const { getUserWishlist } = require("../../controllers/UserController")
 
-const UserModel = require('../../model/UserModel');
+const User = require('../models/UserModel');
 
 jest.mock('../../model/UserModel');
 
