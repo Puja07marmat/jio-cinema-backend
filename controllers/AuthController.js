@@ -1,6 +1,8 @@
 //  const UserModel = require("../models/UserModel");
 
-const User = require('../models/user.model');
+const User = require('../models/UserModel');
+
+
 
 
 const emailSender = require("../utility/DynamicEmailSender");
