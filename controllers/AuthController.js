@@ -1,4 +1,6 @@
-const UserModel = require("../models/UserModel");
+ const UserModel = require("../models/UserModel");
+
+
 const emailSender = require("../utility/DynamicEmailSender");
 const jwt = require("jsonwebtoken");
 const promisify = require("util").promisify;
