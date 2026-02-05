@@ -55,16 +55,23 @@ app.use("/api/payment", PaymentRouter);
 async function startServer() {
     // Only connect to DB in development mode
     if (process.env.NODE_ENV !== 'test') {
-        //  const dbLink = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.gm25i4i.mongodb.net/?appName=Cluster0`;
-      const dbLink= `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.gm25i4i.mongodb.net/?appName=Cluster0`
-        try {
-            await mongoose.connect(dbLink);
-            console.log("Connected to DB");
-        } catch (err) {
-            console.log("DB Connection Error:", err);
-        }
+      
+       const dbLink= `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.gm25i4i.mongodb.net/?appName=Cluster0`
+    // try {
+    //         await mongoose.connect(dbLink);
+    //         console.log("Connected to DB");
+    //     } catch (err) {
+    //         console.log("DB Connection Error:", err);
+    //     }
+    // } 
+    try {
+    await mongoose.connect(dbLink);
+    console.log("✅ Connected to DB");
+} catch (err) {
+    console.log("❌ CONNECTION FAILED!");
+    console.log("Reason:", err.message); // Ye line terminal mein asli wajah batayegi
+}
     }
-
     // Define ports
     const PORT = process.env.NODE_ENV === 'test' ? 5000 : process.env.PORT;
 
